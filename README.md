@@ -1,0 +1,1 @@
+# scanly-privacy-policy
