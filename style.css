@@ -1,0 +1,171 @@
+/* Scanly legal & support pages (GitHub Pages). Colors follow the app's
+   tokens (lib/shared/ui/tokens/sc_colors.dart). */
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --text: #0d0f12;
+  --text-secondary: #5a606b;
+  --separator: rgba(13, 15, 18, 0.1);
+  --accent: #2457e6;
+  --accent-deep: #1838a8;
+  --on-accent: #ffffff;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --surface: #141518;
+    --text: #f4f5f7;
+    --text-secondary: #a0a5ae;
+    --separator: rgba(255, 255, 255, 0.12);
+    --accent: #7096ff;
+    --accent-deep: #2341b0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+header.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2457e6, #1838a8);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 16px rgba(36, 87, 230, 0.3);
+}
+
+.badge svg {
+  width: 24px;
+  height: 24px;
+}
+
+.brand a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 32px 0 8px;
+}
+
+p,
+li {
+  color: var(--text);
+}
+
+.muted {
+  color: var(--text-secondary);
+}
+
+.lead {
+  font-size: 19px;
+  color: var(--text-secondary);
+  margin: 0 0 24px;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 24px 0;
+  border: 1px solid var(--separator);
+}
+
+.card strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+ul {
+  padding-inline-start: 22px;
+}
+
+li + li {
+  margin-top: 6px;
+}
+
+a {
+  color: var(--accent);
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2457e6, #1838a8);
+  color: var(--on-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.links {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.links a {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--separator);
+  border-radius: 14px;
+  padding: 16px 20px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.links a span {
+  display: block;
+  font-weight: 400;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+footer {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid var(--separator);
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+footer a {
+  color: var(--text-secondary);
+}
